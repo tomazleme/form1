@@ -173,7 +173,7 @@ function handleStep6SBackClick(event) {
   showStep(STEP_5S);
 }
   showStep(STEP_6S); // Exemplo: Ir para a etapa 6S
-}
+
 
 // ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
 
@@ -348,7 +348,6 @@ step5NBackBtn.addEventListener('click', handleStep5NBackClick);
 step5NNextBtn.addEventListener('click', handleStep5NNextClick);
 step6SBackBtn.addEventListener('click', handleStep6SBackClick);
 step5NNextBtn.addEventListener('click', handleStep6SNextClick);
-
-
 }
+
 document.addEventListener('DOMContentLoaded', initForm);
