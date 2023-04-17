@@ -1,57 +1,50 @@
 function initForm(){
 
-// Constantes para os nomes das etapas
-const STEP_1 = '1';
-const STEP_2 = '2';
-const STEP_3S = '3S';
-const STEP_4S = '4S';
-const STEP_5S = '5S';
-const STEP_6S = '6S';
-const STEP_7S = '7S';
-const STEP_8SE = '8SE';
-const STEP_8SS = '8SS';
-const STEP_3N = '3N';
-const STEP_4N = '4N';
-const STEP_5N = '5N';
-
-// ... Adicione constantes para todas as etapas
-
-// Seletores dos botões
-const step1NextBtn = document.querySelector('[data-current-step="1"]');
-const step2NextBtn = document.querySelector('[data-current-step="2"]');
-const step2BackBtn = document.querySelector('[data-back-from="2"]');
-
-const step3SNextBtn = document.querySelector('[data-current-step="3S"]');
-const step3SBackBtn = document.querySelector('[data-back-from="3S"]');
-
-const step4SNextBtn = document.querySelector('[data-current-step="4S"]');
-const step4SBackBtn = document.querySelector('[data-back-from="4S"]');
-
-const step5SNextBtn = document.querySelector('[data-current-step="5S"]');
-const step5SBackBtn = document.querySelector('[data-back-from="5S"]');
-
-const step6SNextBtn = document.querySelector('[data-current-step="6S"]');
-const step6SBackBtn = document.querySelector('[data-back-from="6S"]');
-
-const step7SNextBtn = document.querySelector('[data-current-step="7S"]');
-const step7SBackBtn = document.querySelector('[data-back-from="7S"]');
-
-const step8SENextBtn = document.querySelector('[data-current-step="8SE"]');
-const step8SEBackBtn = document.querySelector('[data-back-from="8SE"]');
-
-const step8SSNextBtn = document.querySelector('[data-current-step="8SS"]');
-const step8SSBackBtn = document.querySelector('[data-back-from="8SS"]');
-
-const step3NNextBtn = document.querySelector('[data-current-step="3N"]');
-const step3NBackBtn = document.querySelector('[data-back-from="3N"]');
-
-const step4NNextBtn = document.querySelector('[data-current-step="4N"]');
-const step4NBackBtn = document.querySelector('[data-back-from="4N"]');
-
-const step5NNextBtn = document.querySelector('[data-current-step="5N"]');
-const step5NBackBtn = document.querySelector('[data-back-from="5N"]');
-
-
+  // Constantes para os nomes das etapas
+  const STEP_1 = '1';
+  const STEP_2 = '2';
+  const STEP_3S = '3S';
+  const STEP_4S = '4S';
+  const STEP_5S = '5S';
+  const STEP_6S = '6S';
+  const STEP_7S = '7S';
+  const STEP_8SE = '8SE';
+  const STEP_8SS = '8SS';
+  const STEP_3N = '3N';
+  const STEP_4N = '4N';
+  const STEP_5N = '5N';
+  
+  // ... Adicione constantes para todas as etapas
+  
+  // Seletores dos botões Avançar
+  const step1NextBtn = document.querySelector('[data-current-step="1"]');
+  const step2NextBtn = document.querySelector('[data-current-step="2"]');
+  const step3SNextBtn = document.querySelector('[data-current-step="3S"]');
+  const step4SNextBtn = document.querySelector('[data-current-step="4S"]');
+  const step5SNextBtn = document.querySelector('[data-current-step="5S"]');
+  const step6SNextBtn = document.querySelector('[data-current-step="6S"]');
+  const step7SNextBtn = document.querySelector('[data-current-step="7S"]');
+  const step8SENextBtn = document.querySelector('[data-current-step="8SE"]');
+  const step8SSNextBtn = document.querySelector('[data-current-step="8SS"]');
+  const step3NNextBtn = document.querySelector('[data-current-step="3N"]');
+  const step4NNextBtn = document.querySelector('[data-current-step="4N"]');
+  const step5NNextBtn = document.querySelector('[data-current-step="5N"]');
+  
+  // Seletores dos botões Voltar
+  const step2BackBtn = document.querySelector('[data-back-from="2"]');
+  const step3SBackBtn = document.querySelector('[data-back-from="3S"]');
+  const step4SBackBtn = document.querySelector('[data-back-from="4S"]');
+  const step5SBackBtn = document.querySelector('[data-back-from="5S"]');
+  const step6SBackBtn = document.querySelector('[data-back-from="6S"]');
+  const step7SBackBtn = document.querySelector('[data-back-from="7S"]');
+  const step8SEBackBtn = document.querySelector('[data-back-from="8SE"]');
+  const step8SSBackBtn = document.querySelector('[data-back-from="8SS"]');
+  const step3NBackBtn = document.querySelector('[data-back-from="3N"]');
+  const step4NBackBtn = document.querySelector('[data-back-from="4N"]');
+  const step5NBackBtn = document.querySelector('[data-back-from="5N"]');
+  
+  // ... Restante do código
+ 
 // Oculta todas as etapas
 function hideAllSteps() {
   steps.forEach(step => step.style.display = 'none');
@@ -171,7 +164,13 @@ function handleStep5SBackClick(event) {
 function handleStep5SNextClick(event) {
   event.preventDefault();
   // ... Adicione a lógica para a etapa seguinte e/ou ação específica para esta etapa
+// Função para lidar com o evento de clique que exibe seção step_5S 
+//Testar o evento de clique
 
+function handleStep6SBackClick(event) {
+  event.preventDefault();
+  showStep(STEP_5S);
+}
   showStep(STEP_6S); // Exemplo: Ir para a etapa 6S
 }
 
@@ -346,6 +345,10 @@ step4NBackBtn.addEventListener('click', handleStep4NBackClick);
 step4NNextBtn.addEventListener('click', handleStep4NNextClick);
 step5NBackBtn.addEventListener('click', handleStep5NBackClick);
 step5NNextBtn.addEventListener('click', handleStep5NNextClick);
+step6SBackBtn.addEventListener('click', handleStep6SBackClick);
+step5NNextBtn.addEventListener('click', handleStep6SNextClick);
+
+
 
 }
 document.addEventListener('DOMContentLoaded', initForm);
