@@ -43,6 +43,8 @@ function initForm(){
   const step4NBackBtn = document.querySelector('[data-back-from="4N"]');
   const step5NBackBtn = document.querySelector('[data-back-from="5N"]');
   
+  // Adicione a linha aqui
+  const steps = document.querySelectorAll('.step');
   // ... Restante do código
  
 // Oculta todas as etapas
