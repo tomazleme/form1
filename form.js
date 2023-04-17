@@ -161,11 +161,12 @@ function handleStep5SBackClick(event) {
 }
 
 // Função para lidar com o evento de clique do botão step-5S-next
+//Testar o evento de clique
+
 function handleStep5SNextClick(event) {
   event.preventDefault();
-  // ... Adicione a lógica para a etapa seguinte e/ou ação específica para esta etapa
-// Função para lidar com o evento de clique que exibe seção step_5S 
-//Testar o evento de clique
+  showStep(STEP_6S);
+}
 
 function handleStep6SBackClick(event) {
   event.preventDefault();
@@ -347,7 +348,6 @@ step5NBackBtn.addEventListener('click', handleStep5NBackClick);
 step5NNextBtn.addEventListener('click', handleStep5NNextClick);
 step6SBackBtn.addEventListener('click', handleStep6SBackClick);
 step5NNextBtn.addEventListener('click', handleStep6SNextClick);
-
 
 
 }
