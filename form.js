@@ -52,18 +52,6 @@ const step5NNextBtn = document.querySelector('[data-current-step="5N"]');
 const step5NBackBtn = document.querySelector('[data-back-from="5N"]');
 
 
-// ... Adicione variáveis para todos os botões das etapas seguintes
-const step2BackBtn = document.querySelector('[data-current-step="2-back"]');
-const step3SBackBtn = document.querySelector('[data-current-step="3S-back"]');
-const step4SBackBtn = document.querySelector('[data-current-step="4S-back"]');
-const step5SBackBtn = document.querySelector('[data-current-step="5S-back"]');
-const step6SBackBtn = document.querySelector('[data-current-step="6S-back"]');
-const step7SBackBtn = document.querySelector('[data-current-step="7S-back"]');
-const step3NBackBtn = document.querySelector('[data-current-step="3N-back"]');
-const step4NBackBtn = document.querySelector('[data-current-step="4N-back"]');
-const step5NBackBtn = document.querySelector('[data-current-step="5N-back"]');
-
-
 // Oculta todas as etapas
 function hideAllSteps() {
   steps.forEach(step => step.style.display = 'none');
