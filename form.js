@@ -94,7 +94,7 @@ function handleStep2BackClick(event) {
 // Função para lidar com o evento de clique do botão step-2-next
 function handleStep2NextClick(event) {
   event.preventDefault();
-  const selectedOption = document.querySelector('input[name="step-2-option"]:checked').value;
+  const selectedOption = document.querySelector('.select-domain').value;
   
   if (selectedOption === 'sim') {
     showStep(STEP_3S);
@@ -102,6 +102,7 @@ function handleStep2NextClick(event) {
     showStep(STEP_3N);
   }
 }
+
 
 // ... Insira funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
 
