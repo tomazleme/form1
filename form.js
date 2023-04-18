@@ -23,7 +23,7 @@ function initForm(){
   const step4SNextBtn = document.querySelector('[data-current-step="4S"]');
   const step5SNextBtn = document.querySelector('[data-current-step="5S"]');
   const step6SNextBtn = document.querySelector('[data-current-step="6S"]');
-  const step7SNextBtn = document.querySelector('[data-current-step="7S"]');
+  const step7SNextBtn = document.querySelector('[data-current-step="7S"]'); //Já existia na linha 26
   const step8SENextBtn = document.querySelector('[data-current-step="8SE"]');
   const step8SSNextBtn = document.querySelector('[data-current-step="8SS"]');
   const step3NNextBtn = document.querySelector('[data-current-step="3N"]');
@@ -59,6 +59,17 @@ function hideAllSteps() {
 function showStep(stepNumber) {
   hideAllSteps();
   document.querySelector(`.step-${stepNumber}`).style.display = 'block';
+}
+// Função para lidar com o evento de clique do botão step-7S-next
+function handleStep7SNextClick(event) {
+  event.preventDefault();
+  const selectedOption = document.querySelector('.select-step-7').value;
+
+  if (selectedOption === 'ecommerce') {
+    showStep(STEP_8SE);
+  } else if (selectedOption === 'site') {
+    showStep(STEP_8SS);
+  }
 }
 
 // Valida o formato de email
@@ -102,6 +113,7 @@ function handleStep2NextClick(event) {
     showStep(STEP_3N);
   }
 }
+  
 
 // ... Insira funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
 
@@ -272,7 +284,7 @@ step5SNextBtn.addEventListener('click', handleStep5SNextClick);
 step6SBackBtn.addEventListener('click', handleStep6SBackClick);
 step6SNextBtn.addEventListener('click', handleStep6SNextClick);
 step7SBackBtn.addEventListener('click', handleStep7SBackClick);
-step7SNextBtn.addEventListener('click', handleStep7SNextClick);
+step7SNextBtn.addEventListener('click', handleStep7SNextClick); // Já existia no código linha 287
 // ... Adicione event listeners para os outros botões e campos de entrada
 // Função para lidar com o evento de clique do botão step-8SE-back
 function handleStep8SEBackClick(event) {
