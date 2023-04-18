@@ -122,13 +122,14 @@ function handleStep3SBackClick(event) {
 function handleStep3SNextClick(event) {
   event.preventDefault();
   // ... Adicione a lógica para tratar a opção selecionada e mostrar a etapa correspondente
-  const selectedOption = document.querySelector('input[name="step-3S-option"]:checked').value;
-
-  if (selectedOption === 'op1') {
+  //const selectedOption = document.querySelector('input[name="step-3S-option"]:checked').value;
+  const radioOption = document.querySelector('input[name="step-3S-option"]:checked').value;
+  //const radioOption = document.querySelector('.radio-opt').value;
+  if (radioOption === 'op1') {
     showStep(STEP_4S);
-  } else if (selectedOption === 'op2') {
+  } else if (radioOption === 'op2') {
     showStep(STEP_5S);
-  } else if (selectedOption === 'op3') {
+  } else if (radioOption === 'op3') {
     showStep(STEP_6S);
   }
 }
@@ -141,6 +142,8 @@ step2BackBtn.addEventListener('click', handleStep2BackClick);
 step2NextBtn.addEventListener('click', handleStep2NextClick);
 step3SBackBtn.addEventListener('click', handleStep3SBackClick);
 step3SNextBtn.addEventListener('click', handleStep3SNextClick);
+
+
 // ... Adicione event listeners para os outros botões e campos de entrada
 
 // Função para lidar com o evento de clique do botão step-4S-back
@@ -171,7 +174,7 @@ step4SNextBtn.addEventListener('click', handleStep4SNextClick);
 // Função para lidar com o evento de clique do botão step-5S-back
 function handleStep5SBackClick(event) {
   event.preventDefault();
-  showStep(STEP_4S);
+  showStep(STEP_3S);
 }
 
 // Função para lidar com o evento de clique do botão step-5S-next
@@ -184,9 +187,9 @@ function handleStep5SNextClick(event) {
 
 function handleStep6SBackClick(event) {
   event.preventDefault();
-  showStep(STEP_5S);
+  showStep(STEP_3S);
 }
-  showStep(STEP_6S); // Exemplo: Ir para a etapa 6S
+  //showStep(STEP_6S); // Exemplo: Ir para a etapa 6S
 
 
 // ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
@@ -349,7 +352,6 @@ function handleStep6SNextClick() {
   hideAllSteps();
   showStep('7S');
 }
-
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
