@@ -63,7 +63,7 @@ function showStep(stepNumber) {
 // Função para lidar com o evento de clique do botão step-7S-next
 function handleStep7SNextClick(event) {
   event.preventDefault();
-  const selectedOption = document.querySelector('.select-step-7').value;
+  const selectedOption = document.querySelector('.select-option.select-step-7').value;
 
   if (selectedOption === 'ecommerce') {
     showStep(STEP_8SE);
