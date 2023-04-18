@@ -79,12 +79,12 @@ function handleStep1NextClick(event) {
   showStep(STEP_2);
 }
 
-// Inserir funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Insira funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
 // ... Adicione event listeners para os outros botões e campos de entrada
-
+step6SBackBtn.addEventListener('click', handleStep6SBackClick);
 // Função para lidar com o evento de clique do botão step-2-back
 function handleStep2BackClick(event) {
   event.preventDefault();
@@ -103,7 +103,7 @@ function handleStep2NextClick(event) {
   }
 }
 
-//  Insirir funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Insira funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
@@ -133,7 +133,7 @@ function handleStep3SNextClick(event) {
   }
 }
 
-// Insirir funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Insira funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
@@ -143,7 +143,7 @@ step3SBackBtn.addEventListener('click', handleStep3SBackClick);
 step3SNextBtn.addEventListener('click', handleStep3SNextClick);
 
 
-// Adicionar event listeners para os outros botões e campos de entrada
+// ... Adicione event listeners para os outros botões e campos de entrada
 
 // Função para lidar com o evento de clique do botão step-4S-back
 function handleStep4SBackClick(event) {
@@ -159,7 +159,7 @@ function handleStep4SNextClick(event) {
   showStep(STEP_5S); // Exemplo: Ir para a etapa 5S
 }
 
-//  Criar funções para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
@@ -188,10 +188,11 @@ function handleStep6SBackClick(event) {
   event.preventDefault();
   showStep(STEP_3S);
 }
+
   //showStep(STEP_6S); // Exemplo: Ir para a etapa 6S
 
 
-//  Continuar criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
@@ -216,7 +217,7 @@ function handleStep7SNextClick(event) {
   showStep(STEP_8SE);
 }
 
-// Continuar criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
@@ -246,7 +247,7 @@ function handleStep8SENextClick(event) {
   showStep(STEP_8SS);
 }
 
-// Continuar criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
@@ -264,7 +265,7 @@ step7SBackBtn.addEventListener('click', handleStep7SBackClick);
 step7SNextBtn.addEventListener('click', handleStep7SNextClick);
 step8SEBackBtn.addEventListener('click', handleStep8SEBackClick);
 step8SENextBtn.addEventListener('click', handleStep8SENextClick);
-// Adicionar event listeners para os outros botões e campos de entrada
+// ... Adicione event listeners para os outros botões e campos de entrada
 // Função para lidar com o evento de clique do botão step-8SS-back
 function handleStep8SSBackClick(event) {
   event.preventDefault();
@@ -290,7 +291,7 @@ function handleStep3NNextClick(event) {
   showStep(STEP_4N);
 }
 
-// Continuar criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
+// ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
