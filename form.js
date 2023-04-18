@@ -323,6 +323,21 @@ function handleStep5NNextClick(event) {
   // Realize ações específicas para esta etapa antes de prosseguir
   // ...
 }
+// Função para lidar com o clique no botão 'Voltar' da etapa 6S
+function handleStep6SBackClick() {
+  hideAllSteps();
+  showStep('5S');
+}
+
+// Função para lidar com o clique no botão 'Continuar' da etapa 6S
+function handleStep6SNextClick() {
+  // Implemente a validação necessária para os campos da etapa 6S
+
+  // Caso a validação seja bem-sucedida, prossiga para a próxima etapa
+  hideAllSteps();
+  showStep('7S');
+}
+
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
