@@ -134,6 +134,9 @@ function handleStep3SNextClick(event) {
 }
 
 // ... Insira funções adicionais para lidar com eventos de clique e outras ações específicas para cada etapa
+// Codigo step 7s select 
+// Função para lidar com o evento de clique do botão step-7-next do select do Passo 2
+
 
 // Event listeners para os botões e campos de entrada
 step1NextBtn.addEventListener('click', handleStep1NextClick);
@@ -158,13 +161,42 @@ function handleStep4SNextClick(event) {
 
   showStep(STEP_5S); // Exemplo: Ir para a etapa 5S
 }
- // Função para lidar com o evento de clique do botão step-back
+
+ // Funções para lidar com o evento de clique do botão step-back
+ function getPreviousStep(currentStep) {
+  switch (currentStep) {
+    case STEP_2:
+      return STEP_1;
+    case STEP_3S:
+      return STEP_2;
+    case STEP_3N:
+      return STEP_2;
+    case STEP_4N:
+      return STEP_3N;
+    case STEP_5N:
+      return STEP_4N;
+    case STEP_4S:
+      return STEP_3S;
+    case STEP_5S:
+      return STEP_3S;
+    case STEP_6S:
+      return STEP_3S;
+    case STEP_7S:
+      return STEP_6S;
+    case STEP_8SE:
+      return STEP_7S; 
+    // ... restante do código para os outros passos
+  }
+}
+
+// Função para lidar com o evento de clique do botão step-back
 function handleStepBackClick(event) {
   event.preventDefault();
   const backFrom = event.target.getAttribute('data-back-from');
   const targetStep = getPreviousStep(backFrom);
   showStep(targetStep);
 }
+
  
 
 // ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
