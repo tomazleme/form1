@@ -121,10 +121,9 @@ function handleStep3SBackClick(event) {
 // Função para lidar com o evento de clique do botão step-3S-next
 function handleStep3SNextClick(event) {
   event.preventDefault();
-  // ... Adicione a lógica para tratar a opção selecionada e mostrar a etapa correspondente
-  //const selectedOption = document.querySelector('input[name="step-3S-option"]:checked').value;
+// ... Adicione a lógica para tratar a opção selecionada e mostrar a etapa correspondente
   const radioOption = document.querySelector('input[name="step-3S-option"]:checked').value;
-  //const radioOption = document.querySelector('.radio-opt').value;
+  
   if (radioOption === 'op1') {
     showStep(STEP_4S);
   } else if (radioOption === 'op2') {
