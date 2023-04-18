@@ -158,6 +158,14 @@ function handleStep4SNextClick(event) {
 
   showStep(STEP_5S); // Exemplo: Ir para a etapa 5S
 }
+ // Função para lidar com o evento de clique do botão step-back
+function handleStepBackClick(event) {
+  event.preventDefault();
+  const backFrom = event.target.getAttribute('data-back-from');
+  const targetStep = getPreviousStep(backFrom);
+  showStep(targetStep);
+}
+ 
 
 // ... Continue criando funções para lidar com eventos de clique e outras ações específicas para cada etapa
 
@@ -379,6 +387,11 @@ step5NBackBtn.addEventListener('click', handleStep5NBackClick);
 step5NNextBtn.addEventListener('click', handleStep5NNextClick);
 step6SBackBtn.addEventListener('click', handleStep6SBackClick);
 step5NNextBtn.addEventListener('click', handleStep6SNextClick);
+const stepBackButtons = document.querySelectorAll('.step-back');
+stepBackButtons.forEach((button) => {
+  button.addEventListener('click', handleStepBackClick);
+});
+
 
 hideAllSteps();
 showStep(STEP_1);
