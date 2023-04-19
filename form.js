@@ -71,46 +71,22 @@ function validateEmail(email) {
     return;
   }
 
- // Função para lidar com o evento de clique do botão step-2-next do select do Passo 2
-function handleStep2NextClick(event) {
+ //Função next para os botões
+ function handleStepNextClick(event) {
   event.preventDefault();
-  const selectedOption = document.querySelector('.select-domain').value;
-  
-  if (selectedOption === 'sim') {
-    showStep(STEP_3S);
-  } else {
-    showStep(STEP_3N);
-  }
-}
+  const currentStep = event.target.getAttribute('data-current-step');
 
-// ... Adicione a lógica para tratar a opção selecionada e mostrar a etapa correspondente
-  const radioOption = document.querySelector('input[name="step-3S-option"]:checked').value;
-  
-  if (radioOption === 'op1') {
-    showStep(STEP_4S);
-  } else if (radioOption === 'op2') {
-    showStep(STEP_5S);
-  } else if (radioOption === 'op3') {
-    showStep(STEP_6S);
-  }
-  // Função para lidar com evento de clique do botão next-step
-
-function getNextStep(currentStep) {
   switch (currentStep) {
-    case STEP_1:
-      return STEP_2;
-   
-    // ... restante do código para os outros passos
+    case '1':
+      showStep('step-2');
+      break;
+    default:
+      const targetStep = getNextStep(currentStep);
+      showStep(targetStep);
+      break;
   }
 }
 
-// Função para lidar com o evento de clique do botão next-step
-function handleStepNextClick(event) {
-  event.preventDefault();
-  const backFrom = event.target.getAttribute('data-current-step');
-  const targetStep = getNextStep(backFrom);
-  showStep(targetStep);
-}
 
  // Funções para lidar com o evento de clique do botão step-back
  function getPreviousStep(currentStep) {
@@ -150,4 +126,5 @@ function handleStepBackClick(event) {
 hideAllSteps();
 showStep(STEP_1);
 }
+
 document.addEventListener('DOMContentLoaded', initForm);
