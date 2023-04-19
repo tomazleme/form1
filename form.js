@@ -43,6 +43,8 @@ function initForm(){
   const step4NBackBtn = document.querySelector('[data-back-from="4N"]');
   const step5NBackBtn = document.querySelector('[data-back-from="5N"]');
 
+  
+
   // Adicione a linha para selecionar o campo de email
   const emailInput = document.querySelector('.email-input');
   
@@ -125,6 +127,12 @@ function handleStepBackClick(event) {
 
 hideAllSteps();
 showStep(STEP_1);
+
+const stepNextButtons = document.querySelectorAll('.step-next');
+stepNextButtons.forEach((button) => {
+  button.addEventListener('click', handleStepNextClick);
+});
+
 }
 
 document.addEventListener('DOMContentLoaded', initForm);
