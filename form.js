@@ -1,138 +1,197 @@
-function initForm(){
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--meta charset="UTF-8"-->
+    <!-- meta name="viewport" content="widVth=device-width, initial-scale=1.0"-->
+    <!-- link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/C71z7l7gA9X6f3qM6Uq8i/x7wh6UioBk3q2UTE" crossorigin="anonymous"-->
+    <title>Formulário Step by Step</title>
+    <style>
+        .step {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="step step-1">
+            <h2>Passo 1</h2>
+            <button class="btn btn-primary connect-google">Conectar com Google</button>
+            <button class="btn btn-primary connect-microsoft">Conectar com Microsoft</button>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control email-input" placeholder="Digite o email">
+                </div>
+            </form>
+            <button class="btn btn-primary step-next" data-current-step="1">Continuar</button>
+        </div>
+        <div id="step-2" class="step">
+            <h2>Passo 2</h2>
+            <select class="form-select form-select-lg mb-3 select-domain" aria-label=".form-select-lg example">
+                <option value="sim">Sim, tenho domínio</option>
+                <option value="nao">Não tenho domínio</option>
+            </select>
+            <button class="btn btn-primary step-back" data-back-from="2">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="2">Continuar</button>
+        </div>
+        
+        <!-- Adicione o HTML para os novos passos (step-3S, step-4S, step-5S, step-6S, step-7S, step-8SE, step-8SS, step-3N, step-4N e step-5N) aqui -->
+        
+    </div>
+          <!-- Adicione o HTML para os novos passos (step-3S, step-4S, step-5S, step-6S, step-7S, step-8SE, step-8SS, step-3N, step-4N e step-5N) aqui -->
+          <div class="step step-3S">
+            <h2>Passo 3S</h2>
+            <div class="form-check radio-opt">
+              <input class="form-check-input" type="radio" name="step-3S-option" id="Radios1" value="op1" checked>
+              <label class="form-check-label" for="Radios1">
+                Opção 1
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="step-3S-option" id="Radios2" value="op2">
+              <label class="form-check-label" for="Radios2">
+                Opção 2
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="step-3S-option" id="Radios3" value="op3">
+              <label class="form-check-label" for="Radios3">
+                Opção 3
+              </label>
+            </div>
+            <button class="btn btn-primary step-back" data-back-from="3S">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="3S">Continuar</button>
+          </div>
+ 
+        <div class="step step-4S">
+            <h2>Passo 4S</h2>
+            <h4>Texto01</h4>
 
-  // Constantes para os nomes das etapas
-  const STEP_1 = '1';
-  const STEP_2 = '2';
-  const STEP_3S = '3S';
-  const STEP_4S = '4S';
-  const STEP_5S = '5S';
-  const STEP_6S = '6S';
-  const STEP_7S = '7S';
-  const STEP_8SE = '8SE';
-  const STEP_8SS = '8SS';
-  const STEP_3N = '3N';
-  const STEP_4N = '4N';
-  const STEP_5N = '5N';
-  
-  // ... Adicione constantes para todas as etapas
-  
-  // Seletores dos botões Avançar
-  const step1NextBtn = document.querySelector('[data-current-step="1"]');
-  const step2NextBtn = document.querySelector('[data-current-step="2"]');
-  const step3SNextBtn = document.querySelector('[data-current-step="3S"]');
-  const step4SNextBtn = document.querySelector('[data-current-step="4S"]');
-  const step5SNextBtn = document.querySelector('[data-current-step="5S"]');
-  const step6SNextBtn = document.querySelector('[data-current-step="6S"]');
-  const step7SNextBtn = document.querySelector('[data-current-step="7S"]');
-  const step8SENextBtn = document.querySelector('[data-current-step="8SE"]');
-  const step8SSNextBtn = document.querySelector('[data-current-step="8SS"]');
-  const step3NNextBtn = document.querySelector('[data-current-step="3N"]');
-  const step4NNextBtn = document.querySelector('[data-current-step="4N"]');
-  const step5NNextBtn = document.querySelector('[data-current-step="5N"]');
-  
-  // Seletores dos botões Voltar
-  const step2BackBtn = document.querySelector('[data-back-from="2"]');
-  const step3SBackBtn = document.querySelector('[data-back-from="3S"]');
-  const step4SBackBtn = document.querySelector('[data-back-from="4S"]');
-  const step5SBackBtn = document.querySelector('[data-back-from="5S"]');
-  const step6SBackBtn = document.querySelector('[data-back-from="6S"]');
-  const step7SBackBtn = document.querySelector('[data-back-from="7S"]');
-  const step8SEBackBtn = document.querySelector('[data-back-from="8SE"]');
-  const step8SSBackBtn = document.querySelector('[data-back-from="8SS"]');
-  const step3NBackBtn = document.querySelector('[data-back-from="3N"]');
-  const step4NBackBtn = document.querySelector('[data-back-from="4N"]');
-  const step5NBackBtn = document.querySelector('[data-back-from="5N"]');
+            <button class="btn btn-primary step-back" data-back-from="4S">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="4S">Continuar</button>
+        </div>
 
-  
+        <div class="step step-5S">
+            <h2>Passo 5S</h2>
+            <h4>Texto02</h4>
 
-  // Adicione a linha para selecionar o campo de email
-  const emailInput = document.querySelector('.email-input');
-  
-  // Adicione a linha aqui
-  const steps = document.querySelectorAll('.step');
+            <button class="btn btn-primary step-back" data-back-from="5S">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="5S">Continuar</button>
+        </div>
+
+        <!-- Adicione o HTML para os passos restantes (step-6S, step-7S, step-8SE, step-8SS, step-3N, step-4N e step-5N) de maneira semelhante -->
+
+    </div>
+          <!-- Adicione o HTML para os passos restantes (step-6S, step-7S, step-8SE, step-8SS, step-3N, step-4N e step-5N) de maneira semelhante -->
+          <div class="step step-6S">
+            <h2>Passo 6S</h2>
+            <h4>Texto do Passo 6S</h4>
+            <input type="email" class="form-control email-input" disabled>
+            <button class="btn btn-primary">Pesquisar</button>
+            <!-- Adicione os outros campos e botões para o passo 6S conforme necessário -->
+            <button class="btn btn-primary step-back" data-back-from="6S">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="6S">Continuar</button>
+        </div>
+
+        <!-- Continue adicionando o HTML para os passos restantes (step-7S, step-8SE, step-8SS, step-3N, step-4N e step-5N) -->
+
+    </div>
+           <!-- Passo 7S -->
+           <div class="step step-7S">
+            <h2>Passo 7S</h2>
+            <h4>Texto do Passo 7S</h4>
+            <input type="text" class="form-control domain-input" disabled>
+            <select class="form-control select-option select-step-7" name="step-7S-option">
+                <option value="">Selecione uma opção</option>
+                <option value="ecommerce">Ecommerce completo</option>
+                <option value="site">Site completo</option>
+              </select>
+              
+            <button class="btn btn-primary step-back" data-back-from="7S">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="7S">Continuar</button>
+        </div>
+
+        <!-- Adicione o HTML para os passos restantes (step-8SE, step-8SS, step-3N, step-4N e step-5N) de maneira semelhante -->
+
+    </div>
+           <!-- Passo 8SE -->
+           <div class="step step-8SE">
+            <h2>Passo 8SE</h2>
+            <h4>Texto do Passo 8SE</h4>
+            <button class="btn btn-primary view-image-modal" data-bs-toggle="modal" data-bs-target="#imageModal">Ver imagem</button>
+
+            <!-- Adicione os campos de checkbox, radiobuttons e links "ver imagem" relacionados aqui -->
+
+            <button class="btn btn-primary step-back" data-back-from="8SE">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="8SE">Continuar</button>
+        </div>
+
+        <!-- Adicione o HTML para os passos restantes (step-8SS, step-3N, step-4N e step-5N) de maneira semelhante -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Modal Imagem</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Conteúdo do modal imagem
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+           <!-- Passo 8SS -->
+           <div class="step step-8SS">
+            <h2>Passo 8SS</h2>
+            <h4>Texto do Passo 8SS</h4>
+            <!-- Adicione os campos de checkbox, radiobuttons e links "ver imagem" relacionados aqui, exceto o campo checkbox8 -->
+            <button class="btn btn-primary step-back" data-back-from="8SS">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="8SS">Continuar</button>
+        </div>
+
+        <!-- Passo 3N -->
+        <div class="step step-3N">
+            <h2>Passo 3N</h2>
+            <button class="btn btn-primary">Botão 1</button>
+            <button class="btn btn-primary">Botão 2</button>
+            <button class="btn btn-primary">Botão 3</button>
+            <button class="btn btn-primary">Botão 4</button>
+            <button class="btn btn-primary step-back" data-back-from="3N">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="3N">Continuar</button>
+        </div>
+
+        <!-- Passo 4N -->
+        <div class="step step-4N">
+            <h2>Passo 4N</h2>
+            <button class="btn btn-primary">Botão 1</button>
+            <button class="btn btn-primary">Botão 2</button>
+            <button class="btn btn-primary">Botão 3</button>
+            <button class="btn btn-primary">Botão 4</button>
+            <button class="btn btn-primary step-back" data-back-from="4N">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="4N">Continuar</button>
+        </div>
+
+        <!-- Passo 5N -->
+        <div class="step step-5N">
+            <h2>Passo 5N</h2>
+            <label for="email-input-5N">Email:</label>
+            <input type="email" class="form-control email-input" id="email-input-5N" readonly>
+            <label for="subject-select">Assunto:</label>
+            <select class="form-control" id="subject-select">
+                <option>Assunto 1</option>
+                <option>Assunto 2</option>
+                <option>Assunto 3</option>
+            </select>
+            <label for="message-textarea">Mensagem:</label>
+            <textarea class="form-control" id="message-textarea"></textarea>
+            <button class="btn btn-primary step-back" data-back-from="5N">Voltar</button>
+            <button class="btn btn-primary step-next" data-current-step="5N">Continuar</button>
+        </div>
+    </div>
    
-// Oculta todas as etapas
-function hideAllSteps() {
-  steps.forEach(step => step.style.display = 'none');
-}
 
-// Exibe uma etapa específica
-function showStep(stepNumber) {
-  hideAllSteps();
-  document.querySelector(`.step-${stepNumber}`).style.display = 'block';
-}
-
-// Valida o formato de email
-function validateEmail(email) {
-  const emailRegex = /\S+@\S+\.\S+/;
-  return emailRegex.test(email);
-}
-
-  if (!validateEmail(emailInput.value)) {
-    alert('Por favor, insira um email válido.');
-    return;
-  }
-
- //Função next para os botões
- function handleStepNextClick(event) {
-  event.preventDefault();
-  const currentStep = event.target.getAttribute('data-current-step');
-
-  switch (currentStep) {
-    case '1':
-      showStep('step-2');
-      break;
-    default:
-      const targetStep = getNextStep(currentStep);
-      showStep(targetStep);
-      break;
-  }
-}
-
-
- // Funções para lidar com o evento de clique do botão step-back
- function getPreviousStep(currentStep) {
-  switch (currentStep) {
-    case STEP_2:
-      return STEP_1;
-    case STEP_3S:
-      return STEP_2;
-    case STEP_3N:
-      return STEP_2;
-    case STEP_4N:
-      return STEP_3N;
-    case STEP_5N:
-      return STEP_4N;
-    case STEP_4S:
-      return STEP_3S;
-    case STEP_5S:
-      return STEP_3S;
-    case STEP_6S:
-      return STEP_3S;
-    case STEP_7S:
-      return STEP_6S;
-    case STEP_8SE:
-      return STEP_7S; 
-    // ... restante do código para os outros passos
-  }
-}
-
-// Função para lidar com o evento de clique do botão step-back
-function handleStepBackClick(event) {
-  event.preventDefault();
-  const backFrom = event.target.getAttribute('data-back-from');
-  const targetStep = getPreviousStep(backFrom);
-  showStep(targetStep);
-}
-
-hideAllSteps();
-showStep(STEP_1);
-
-const stepNextButtons = document.querySelectorAll('.step-next');
-stepNextButtons.forEach((button) => {
-  button.addEventListener('click', handleStepNextClick);
-});
-
-}
-
-document.addEventListener('DOMContentLoaded', initForm);
